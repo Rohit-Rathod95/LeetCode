@@ -4,10 +4,12 @@ class Solution {
         int k = n / 4;
 
         int[] count = new int[128];
-        for (char ch : s.toCharArray()) {
+        char[] arr=s.toCharArray();
+        for(int i=0;i<arr.length;i++) {
+            char ch=arr[i];
             count[ch]++;
         }
-        
+
         if (count['Q'] == k && count['W'] == k &&
             count['E'] == k && count['R'] == k) {
             return 0;
